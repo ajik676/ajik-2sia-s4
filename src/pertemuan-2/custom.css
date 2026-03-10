@@ -1,0 +1,84 @@
+/* Styling untuk keseluruhan halaman */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Font mesin tik tua */
+    background-color: #1a1a1a;
+    /* Efek tekstur kotor/bercak pada background */
+    background-image: 
+        radial-gradient(circle, rgba(0,0,0,0.7) 0%, transparent 100%),
+        url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    color: #a9a9a9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container utama - Kertas Tua & Berlumut */
+.card {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #2c2c2c;
+    padding: 30px;
+    border-radius: 2px; /* Kaku & tidak rapi */
+    /* Border seperti seng karatan atau bekas cakaran */
+    border: 3px double #4a0404;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 50px rgba(139, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek "Bercak Darah" di pojok kartu */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(139, 0, 0, 0.5) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Header utama - Peringatan Bahaya */
+h1 {
+    color: #ff0000; /* Merah Darah */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 3px 3px 0px #4a0404, 0 0 10px rgba(255, 0, 0, 0.5);
+    transform: rotate(-1deg); /* Sedikit miring agar terlihat kacau */
+}
+
+/* Paragraf - Catatan Penyintas */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #8fbc8f; /* Hijau pucat/infeksi */
+    border-left: 3px solid #4a0404;
+    padding-left: 15px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Garis pemisah - Bekas Sayatan */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8b0000, transparent);
+    margin: 20px 0;
+}
+
+/* Greeting / Status Akhir */
+small {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    color: #556b2f; /* Hijau lumut gelap */
+    margin-top: 15px;
+    text-transform: uppercase;
+    animation: blink 2s infinite; /* Efek lampu redup */
+}
+
+/* Animasi Kedipan Lampu Rusak */
+@keyframes blink {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.3; }
+}
