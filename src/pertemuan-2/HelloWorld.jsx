@@ -7,9 +7,10 @@ export default function HelloWorld(){
 
     return (
         <div>
+            <img src="./img/gambar2.jpg" alt="beruang" width={190}/>
             <h1>Hello World</h1>
             <p>Selamat Belajar ReactJs</p>
-<img src="./img/gambar2.jpg" alt="beruang" width={190}/>
+
                 <UserCard 
 	            nama="Ajik" 
 	            nim="2457301091"
